@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:local="clr-namespace:Desafio2" 
+    x:Class="Desafio2.Desafio2Page"
+    Title="Mês/Ano">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Name="btnNovoMes"
+            Order="Primary"
+            Text="Novo"
+            Priority="0"
+            Activated="OnButtonNovoMesClicked"/>
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <ListView x:Name="Meses" HasUnevenRows="true" ItemSelected="OnItemSelectedItem">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.View>
+                            <StackLayout Padding="5, 16, 5, 16">
+                                <Label Text="{Binding MesAno}" Font="Bold,Large" HorizontalOptions="Center"/>
+                                <Label Text="{Binding Id}" IsVisible="false" />
+                            </StackLayout>
+                        </ViewCell.View>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>

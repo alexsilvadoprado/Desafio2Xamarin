@@ -1,0 +1,21 @@
+﻿<Properties StartupConfiguration="{180A72FB-0DE9-4CC2-9CCF-520831C50E49}|Default">
+  <MonoDevelop.Ide.ItemProperties.Desafio2.Droid PreferredExecutionTarget="Android.0023413275" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Desafio2/NovoMes.xaml.cs">
+    <Files>
+      <File FileName="Desafio2/Data/DBConnection.cs" Line="56" Column="10" />
+      <File FileName="Desafio2/NovaMovimentacao.xaml" Line="31" Column="47" />
+      <File FileName="Desafio2/NovaMovimentacao.xaml.cs" Line="34" Column="9" />
+      <File FileName="Desafio2/NovoMes.xaml.cs" Line="7" Column="33" />
+      <File FileName="Desafio2/Movimentacoes.xaml.cs" Line="50" Column="10" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Desafio2.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.">
+    <MonoDevelop.MacDev.AppleDevelopmentTeam />
+  </MonoDevelop.Ide.ItemProperties.Desafio2.iOS>
+  <MultiItemStartupConfigurations />
+</Properties>

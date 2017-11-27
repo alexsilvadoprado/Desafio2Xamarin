@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="Desafio2.Movimentacoes">
+	<ContentPage.ToolbarItems>
+        <ToolbarItem Name="btnNovaMovimentacao"
+            Order="Primary"
+            Text="Novo"
+            Priority="0"
+            Activated="OnButtonNovoMovClicked"/>
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal" BackgroundColor="Gray" HeightRequest="50" Padding="5, 0, 5, 0">
+                <Label Text="Saldo:" Font="Bold, Large" TextColor="White" HorizontalOptions="StartAndExpand" VerticalOptions="Center"/>
+                <Label x:Name="lblSaldo" Font="Bold, Large" HorizontalOptions="EndAndExpand" VerticalOptions="Center" />
+            </StackLayout>
+            <ListView x:Name="ListaMovimentacoes" HasUnevenRows="true">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <StackLayout Padding="5, 16, 5, 16">
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="{Binding Valor, StringFormat='{0:C}'}" Font="Bold,Large" HorizontalOptions="Start"/>
+                                        <Label x:Name="lblMovTipo" Text="{Binding MovimentacaoTipo}" TextColor="{Binding MovimentacaoCor}" Font="Bold, Large" HorizontalOptions="End" />
+                                    </StackLayout>
+                                    <Label Text="{Binding Descricao}" HorizontalOptions="Start" />
+                                </StackLayout>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
