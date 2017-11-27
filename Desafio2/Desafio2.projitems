@@ -23,6 +23,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Sobre.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
@@ -37,13 +41,15 @@
     <Compile Include="$(MSBuildThisFileDirectory)NovoMes.xaml.cs">
       <DependentUpon>NovoMes.xaml</DependentUpon>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)PopupLayout.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Movimentacao.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Movimentacoes.xaml.cs">
       <DependentUpon>Movimentacoes.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)NovaMovimentacao.xaml.cs">
       <DependentUpon>NovaMovimentacao.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Sobre.xaml.cs">
+      <DependentUpon>Sobre.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

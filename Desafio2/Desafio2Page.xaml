@@ -11,6 +11,12 @@
             Text="Novo"
             Priority="0"
             Activated="OnButtonNovoMesClicked"/>
+
+        <ToolbarItem Name="btnSobre"
+            Order="Secondary"
+            Text="Sobre"
+            Priority="0"
+            Activated="OnButtonSobreClicked"/>
     </ContentPage.ToolbarItems>
 
     <ContentPage.Content>

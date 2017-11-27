@@ -2,6 +2,9 @@
 using SQLite;
 namespace Desafio2.Models
 {
+    /// <summary>
+    /// DataBase Model de Mes
+    /// </summary>
     public class Mes
     {
         [PrimaryKey, AutoIncrement]

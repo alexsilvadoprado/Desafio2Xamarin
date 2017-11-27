@@ -15,6 +15,11 @@ namespace Desafio2
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Salva o Mes/Ano no SQLite e fecha o Popup
+        /// </summary>
+        /// <param name="sender">Sender.</param>
+        /// <param name="e">E.</param>
         async void OnButtonSalvarMesClicked(object sender, EventArgs e)
         {
             string mesAno = inputMes.Text + "/" + inputAno.Text;
@@ -41,31 +46,15 @@ namespace Desafio2
             base.OnDisappearing();
         }
 
-        // Method for animation child in PopupPage
-        // Invoced after custom animation end
-        protected override Task OnAppearingAnimationEnd()
-        {
-            return Content.FadeTo(0.5);
-        }
-
-        // Method for animation child in PopupPage
-        // Invoked before custom animation begin
-        protected override Task OnDisappearingAnimationBegin()
-        {
-            return Content.FadeTo(1);
-        }
-
         protected override bool OnBackButtonPressed()
         {
-            // Prevent hide popup
             return base.OnBackButtonPressed();
-            //return true;
         }
 
-        // Invoced when background is clicked
+        // Invocado quando o background é clicado
         protected override bool OnBackgroundClicked()
         {
-            // Return default value - CloseWhenBackgroundIsClicked
+            // Retorna o valor padrão - Fecha quando o background é clicado
             return base.OnBackgroundClicked();
         }
     }

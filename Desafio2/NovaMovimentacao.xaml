@@ -3,7 +3,6 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
     xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
-    xmlns:pscr="clr-namespace:PSC.Xam.Controls.BindableRadioButton;assembly=PSC.Xam.Controls.BindableRadioButton"
     x:Class="Desafio2.NovaMovimentacao">
 	<pages:PopupPage.Animation>
         <animations:ScaleAnimation 
@@ -25,10 +24,8 @@
         <Label FontSize="14" Text="Valor:" HorizontalOptions="Start" />
         <Entry x:Name="inputValor" Keyboard="Numeric" />
 
-        <pscr:BindableRadioGroup
-            x:Name="rdbtnTipoMov"
-            SelectedIndex="OnItemSelectedIndex"
-            VerticalOptions="Start" />
+        <Picker x:Name="pickerTipoMov" 
+            Title="Tipo de Movimentação" />
 
         <Button x:Name="btnSalvar" Text="Salvar" HorizontalOptions="EndAndExpand" Clicked="OnButtonSalvarMovClicked" />
     </StackLayout>

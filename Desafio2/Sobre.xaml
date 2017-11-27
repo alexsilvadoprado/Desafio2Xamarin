@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Desafio2.Sobre"
+    Title="Sobre a Aplicação">
+	<ContentPage.Content>
+        <StackLayout Padding="5, 16, 5, 0">
+            <Label Text="Esta aplicação tem o intuito de auxiliar no controle mensal de sua renda pessoal, se você assim como eu é uma pessoa que gosta de controlar suas despesas e receitas mensais de forma fácil, então você está utilizando o APP certo, pois diferentemente das outras aplicações, esta é focada apenas no básico com o intuito de deixá-lo à par do que recebeu e gastou e quanto lhe sobrou de saldo. Crie um controle do mês desejado, clique sobre ele e adicione suas despesas e receitas, simples assim."
+            Font="Large" 
+            HorizontalTextAlignment="Center" 
+            HorizontalOptions="Center" 
+            VerticalOptions="Center"/>
+            <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand">
+                <Label Text="Desenvolvedores:" Font="Bold, Large" HorizontalOptions="Start" VerticalOptions="CenterAndExpand"/>
+                <Label Text="Álex Prado e Euvaldo Costa" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" />
+            </StackLayout>
+        </StackLayout>
+	</ContentPage.Content>
+</ContentPage>

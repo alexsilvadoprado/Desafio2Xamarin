@@ -10,18 +10,29 @@ namespace Desafio2
 {
     public partial class NovaMovimentacao : PopupPage
     {
-        public NovaMovimentacao()
+        private int _mesId;
+
+        public NovaMovimentacao(int mesId)
         {
             InitializeComponent();
+
+            _mesId = mesId;
         }
 
+        /// <summary>
+        /// Salva a movimentação no SQLite e fecha o Popup
+        /// </summary>
+        /// <param name="sender">Sender.</param>
+        /// <param name="e">E.</param>
         async void OnButtonSalvarMovClicked(object sender, EventArgs e)
         {
             await App.Database.SalvarMovimentacaoAsync(new Movimentacao()
             {
                 Descricao = inputDescricao.Text,
                 Valor = Double.Parse(inputValor.Text),
-                MovimentacaoTipo = rdbtnTipoMov.
+                MovimentacaoTipo = pickerTipoMov.SelectedIndex == 0 ? "Receita" : "Despesa",
+                MovimentacaoCor = pickerTipoMov.SelectedIndex == 0 ? "Lime" : "Red",
+                MesId = _mesId
             });
 
             await PopupNavigation.PopAsync();
@@ -30,6 +41,8 @@ namespace Desafio2
         protected override void OnAppearing()
         {
             base.OnAppearing();
+
+            pickerTipoMov.ItemsSource = new List<string>() { "Receita", "Despesa" };
         }
 
         protected override void OnDisappearing()
@@ -37,31 +50,15 @@ namespace Desafio2
             base.OnDisappearing();
         }
 
-        // Method for animation child in PopupPage
-        // Invoced after custom animation end
-        //protected override Task OnAppearingAnimationEnd()
-        //{
-        //    return Content.FadeTo(0.5);
-        //}
-
-        // Method for animation child in PopupPage
-        // Invoked before custom animation begin
-        //protected override Task OnDisappearingAnimationBegin()
-        //{
-        //    return Content.FadeTo(1);
-        //}
-
         protected override bool OnBackButtonPressed()
         {
-            // Prevent hide popup
             return base.OnBackButtonPressed();
-            //return true;
         }
 
-        // Invoced when background is clicked
+        // Invocado quando o background é clicado
         protected override bool OnBackgroundClicked()
         {
-            // Return default value - CloseWhenBackgroundIsClicked
+            // Retorna valor padrão - Fecha quando o background é clicado
             return base.OnBackgroundClicked();
         }
     }

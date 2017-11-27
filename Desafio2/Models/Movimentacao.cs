@@ -3,6 +3,9 @@ using System.Drawing;
 using SQLite;
 namespace Desafio2.Models
 {
+    /// <summary>
+    /// DataBase Model de Movimentação
+    /// </summary>
     public class Movimentacao
     {
         [PrimaryKey, AutoIncrement]

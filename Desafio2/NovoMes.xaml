@@ -23,7 +23,7 @@
         <Entry x:Name="inputMes" />
 
         <Label FontSize="14" Text="Ano:" HorizontalOptions="Start" />
-        <Entry x:Name="inputAno" />
+        <Entry x:Name="inputAno" Keyboard="Numeric" />
 
         <Button x:Name="btnSalvar" Text="Salvar" HorizontalOptions="EndAndExpand" Clicked="OnButtonSalvarMesClicked" />
     </StackLayout>
